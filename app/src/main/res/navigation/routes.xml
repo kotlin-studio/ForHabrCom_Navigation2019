@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools" android:id="@+id/routes"
+            app:startDestination="@id/fragment1">
+
+    <fragment android:id="@+id/fragment1" android:name="com.github.kotlin_studio.navigation2019.Fragment1"
+              android:label="Фрагмент №1" tools:layout="@layout/fragment_fragment1">
+        <action android:id="@+id/action_fragment1_to_fragment4" app:destination="@id/fragment4"/>
+        <action android:id="@+id/action_fragment1_to_fragment22" app:destination="@id/fragment2"/>
+    </fragment>
+    <fragment android:id="@+id/fragment2" android:name="com.github.kotlin_studio.navigation2019.Fragment2"
+              android:label="Фрагмент №2" tools:layout="@layout/fragment_fragment2">
+        <action android:id="@+id/action_fragment2_to_fragment3" app:destination="@id/fragment3"/>
+    </fragment>
+    <fragment android:id="@+id/fragment3" android:name="com.github.kotlin_studio.navigation2019.Fragment3"
+              android:label="Фрагмент №3" tools:layout="@layout/fragment_fragment3"/>
+    <fragment android:id="@+id/fragment4" android:name="com.github.kotlin_studio.navigation2019.Fragment4"
+              android:label="Фрагмент №4" tools:layout="@layout/fragment_fragment4"/>
+</navigation>
+
+
+
