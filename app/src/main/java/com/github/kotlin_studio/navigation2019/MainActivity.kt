@@ -1,5 +1,6 @@
 package com.github.kotlin_studio.navigation2019
 
+import android.net.Uri
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.design.widget.NavigationView
@@ -35,7 +36,12 @@ class MainActivity : AppCompatActivity() {
         val toolBar = findViewById<Toolbar>(R.id.toolbar)
         toolBar.setupWithNavController(navController, appBarConfiguration)
 
+        // включаем нижнее меню для всех страниц
+        // val bottomBar = findViewById<NavigationView>(R.id.bottom_nav_view)
+        // bottomBar?.setupWithNavController(navController)
+
     }
+
 }
 
 
