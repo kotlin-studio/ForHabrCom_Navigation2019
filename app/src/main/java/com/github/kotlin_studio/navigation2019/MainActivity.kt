@@ -30,30 +30,12 @@ class MainActivity : AppCompatActivity() {
         val sideBar = findViewById<NavigationView>(R.id.nav_view)
         sideBar?.setupWithNavController(navController)
 
-        // настраиваем панель инструментов
-        //appBarConfiguration = AppBarConfiguration(navController.graph)
+        // настраиваем и включаем панель инструментов (toolbar)
         appBarConfiguration = AppBarConfiguration(navController.graph, drawerLayout = drawer_layout)
-
-        // включаем toolbar
         val toolBar = findViewById<Toolbar>(R.id.toolbar)
         toolBar.setupWithNavController(navController, appBarConfiguration)
 
-
-
-        //navController.navigateUp(appBarConfiguration) || super.onSupportNavigateUp()
-
-
     }
-//
-//    override fun onSupportNavigateUp(): Boolean {
-//        return navController.navigateUp(appBarConfiguration) || super.onSupportNavigateUp()
-//    }
-
-//
-//    override fun onSupportNavigateUp(): Boolean {
-//        return navController.navigateUp(appBarConfiguration) || super.onSupportNavigateUp()
-//    }
-//
 }
 
 
