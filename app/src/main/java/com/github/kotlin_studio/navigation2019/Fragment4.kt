@@ -2,16 +2,15 @@ package com.github.kotlin_studio.navigation2019
 
 
 import android.os.Bundle
+import android.support.design.widget.NavigationView
 import android.support.v4.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.ui.setupWithNavController
+import kotlinx.android.synthetic.main.fragment_fragment3.view.*
 
-
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
 
 /**
  * A simple [Fragment] subclass.
@@ -23,9 +22,26 @@ class Fragment4 : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_fragment4, container, false)
+
+        // получаем ссылку на макет фрагмента
+        val fragmentLayout = inflater.inflate(R.layout.fragment_fragment4, container, false)
+
+        // получаем ссылку на NavController (навигационный контроллер)
+        val navController = NavHostFragment.findNavController(this)
+
+        // включаем нижнее меню для данного фрагмента
+        val bottomBar = view?.findViewById<NavigationView>(R.id.bottom_nav_view)
+        bottomBar?.setupWithNavController(navController)
+        fragmentLayout.bottom_nav_view.setOnNavigationItemSelectedListener { item ->
+            navController.navigate(item.itemId)
+            return@setOnNavigationItemSelectedListener true
+        }
+
+        // возвращаем макет фрагмента
+        return fragmentLayout
+
     }
+
 
 
 }

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+            android:id="@+id/fragment1"
+            android:icon="@drawable/ic_launcher_background"
+            android:title="Фрагмент 1"/>
+    <item
+            android:id="@+id/fragment4"
+            android:icon="@drawable/ic_launcher_background"
+            android:title="Фрагмент 4"/>
+</menu>
+
+
